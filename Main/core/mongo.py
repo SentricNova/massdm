@@ -15,5 +15,6 @@ try:
     mongodb = _mongo_async_[DB_NAME]
     LOGGER(__name__).info(f"🚀 Successfully connected to the MongoDB database '{DB_NAME}'!")
 except Exception as err:
-    mongodb = None
     LOGGER(__name__).error(f"❌ Failed to connect to the MongoDB database:\n\n {err}")
+    import sys
+    sys.exit()
