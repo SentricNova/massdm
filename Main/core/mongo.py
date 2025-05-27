@@ -7,7 +7,7 @@ try:
     except ImportError:
         import os
         LOGGER(__name__).info("🛠️ The 'motor' library for asynchronous MongoDB operations is not installed. Attempting to install it...")
-        os.system("pip3 install motor==2.5.0")
+        os.system("pip3 install motor==3.3.1")
         LOGGER(__name__).info("✅ Installation complete!")
         from motor.motor_asyncio import AsyncIOMotorClient
     LOGGER(__name__).info("🔗 Connecting to the MongoDB database...")
