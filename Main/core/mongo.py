@@ -12,7 +12,7 @@ try:
         from motor.motor_asyncio import AsyncIOMotorClient
     LOGGER(__name__).info("🔗 Connecting to the MongoDB database...")
     _mongo_async_ = AsyncIOMotorClient(MONGO_DB)
-    mongodb = _mongo_async_[DB_NAME]
+    mongodb = _mongo_async_.helperbro
     LOGGER(__name__).info(f"🚀 Successfully connected to the MongoDB database '{DB_NAME}'!")
 except Exception as err:
     LOGGER(__name__).error(f"❌ Failed to connect to the MongoDB database:\n\n {err}")
